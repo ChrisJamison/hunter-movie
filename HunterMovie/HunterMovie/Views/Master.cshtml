@@ -1,0 +1,399 @@
+﻿@using ClientDependency.Core.Mvc
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+
+    Html.RequiresCss("~/Content/bootstrap/css/bootstrap.min.css");
+    Html.RequiresCss("~/Content/css/font-awesome.min.css");
+    Html.RequiresCss("~/Content/css/owl.carousel.css");
+    Html.RequiresCss("~/Content/css/main.css?v=1.3");
+    Html.RequiresCss("~/Content/css/responsive.css?v=2.6");
+    Html.RequiresCss("https://fonts.googleapis.com/css?family=Roboto:400,300,500");
+
+    Html.RequiresJs("~/Scripts/js/jquery-1.11.1.min.js");
+    Html.RequiresJs("~/Scripts/js/jquery.lazyload.min.js");
+    Html.RequiresJs("~/Scripts/js/functions.js?v=1.11");
+    Html.RequiresJs("~/Scripts/js/actions.js?v=1.9");
+    Html.RequiresJs("~/Scripts/js/main.js");
+    Html.RequiresJs("~/Content/bootstrap/js/bootstrap.min.js");
+
+    Html.RequiresJs("~/Scripts/js/social_login.js?v=1.5");
+    Html.RequiresJs("https://campaigns-assets-vp.daumcdn.net/websdk/vp-latest.min.js");
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="content-language" content="vi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="title" content="Phim Hay | Phim HD Vietsub | Xem Phim Online | Xem Phim Nhanh | BanhTV" />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="ROBOTS" content="index,follow,noodp" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="BingBOT" content="index,follow" />
+    <meta name="yahooBOT" content="index,follow" />
+    <meta name="slurp" content="index,follow" />
+    <meta name="msnbot" content="index,follow" />
+    <meta property="og:site_name" content="banhtv.com" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta name="client_id" content="1247393433-la5t1i7s8jc7ve74hbbacfih8q94t4of.apps.googleusercontent.com" />
+    <meta name="google-signin-client_id" content="1247393433-la5t1i7s8jc7ve74hbbacfih8q94t4of.apps.googleusercontent.com" />
+    <meta name="google-site-verification" content="DZbi7mtJx-M-oUHWhx_D3CztU9MEFaxVWPOKnf7hzmo" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta property="fb:app_id" content="1089059977876558" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://banhtv.com" />
+    <meta property="og:title" content="Phim Hay | Phim HD Vietsub | Xem Phim Online | Xem Phim Nhanh | BanhTV" />
+    <meta property="og:description" content="Xem phim hay nhất 2016 cập nhật nhanh nhất, Xem Phim Online tốt trên nhiều thiết bị" />
+    <meta name="description" content="Xem phim hay nhất 2016 cập nhật nhanh nhất, Xem Phim Online tốt trên nhiều thiết bị" />
+    <meta name="keywords" content="Phim, xem phim, xem phim online, phim online, xem phim hd, phim vietsub, phim thuyet minh" />
+    <title>Phim Hay | Phim HD Vietsub | Xem Phim Online | Xem Phim Nhanh | BanhTV</title>
+    @Html.RenderCssHere()
+  
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <a title="Trang chủ" id="logo" href="/" title="Trang chủ">
+                <img src="/images/logo.png?v=1.4" alt="" />
+            </a>
+            <ul id="main-menu">
+                <li class="active">
+                    <a title="Trang chủ" href="/">Trang chủ</a>
+                </li>
+                <li class="">
+                    <a title="Phim bộ" href="/danh-sach/phim-bo.html">Phim bộ</a>
+                    <ul class="sub-menu ">
+                        <li><a href="/phim-bo/viet-nam-7.html">Việt Nam</a></li>
+                        <li><a href="/phim-bo/trung-quoc-2.html">Trung Quốc</a></li>
+                        <li><a href="/phim-bo/han-quoc-5.html">Hàn Quốc</a></li>
+                        <li><a href="/phim-bo/thai-lan-6.html">Thái Lan</a></li>
+                        <li><a href="/phim-bo/hong-kong-10.html">Hồng Kông</a></li>
+                        <li><a href="/phim-bo/au-my-3.html">Âu - Mỹ</a></li>
+                        <li><a href="/phim-bo/dai-loan-1.html">Đài Loan</a></li>
+                        <li><a href="/phim-bo/nhat-ban-8.html">Nhật Bản</a></li>
+                        <li><a href="/phim-bo/an-do-11.html">Ấn Độ</a></li>
+                        <li><a href="/phim-bo/philippines-12.html">Philippines</a></li>
+                        <li><a href="/phim-bo/quoc-gia-khac-9.html">Quốc gia khác</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a title="Phim lẻ" href="/danh-sach/phim-le.html">Phim lẻ</a>
+                    <ul class="sub-menu span-6">
+                        <li><a href="/phim-le/co-trang-than-thoai-6.html">Cổ Trang - Thần Thoại</a></li>
+                        <li><a href="/phim-le/vo-thuat-kiem-hiep-4.html">Võ Thuật - Kiếm Hiệp</a></li>
+                        <li><a href="/phim-le/phieu-luu-hanh-dong-1.html">Phiêu lưu - Hành động</a></li>
+                        <li><a href="/phim-le/tam-ly-tinh-cam-51.html">Tâm Lý - Tình Cảm</a></li>
+                        <li><a href="/phim-le/hoat-hinh-55.html">Hoạt Hình</a></li>
+                        <li><a href="/phim-le/khoa-hoc-vien-tuong-2.html">Khoa Học - Viễn Tưởng</a></li>
+                        <li><a href="/phim-le/hinh-su-chien-tranh-7.html">Hình Sự - Chiến Tranh</a></li>
+                        <li><a href="/phim-le/tai-lieu-kham-pha-3.html">Tài Liệu - Khám Phá</a></li>
+                        <li><a href="/phim-le/van-hoa-tam-linh-53.html">Văn Hóa - Tâm Linh</a></li>
+                        <li><a href="/phim-le/hai-huoc-52.html">Hài Hước</a></li>
+                        <li><a href="/phim-le/the-thao-am-nhac-54.html">Thể Thao - Âm Nhạc</a></li>
+                        <li><a href="/phim-le/kinh-di-ma-5.html">Kinh Dị - Ma</a></li>
+                        <li><a href="/phim-le/gia-dinh-hoc-duong-58.html">Gia Đình - Học Đường</a></li>
+                        <li><a href="/phim-le/tv-show-57.html">TV Show</a></li>
+                        <li><a href="/phim-le/phim-chieu-rap-56.html">Phim Chiếu Rạp</a></li>
+                        <li><a href="/phim-le/sitcom-61.html">Sitcom</a></li>
+                        <li><a href="/phim-le/thuyet-minh-59.html">Thuyết Minh</a></li>
+                        <li><a href="/phim-le/long-tieng-60.html">Lồng Tiếng</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a title="Phim chiếu rạp" href="/danh-sach/phim-chieu-rap-56.html">Phim chiếu rạp</a>
+                </li>
+                <li class="">
+                    <a title="TV Show" href="/danh-sach/tv-show-57.html">TV Show</a>
+                </li>
+                <li class="">
+                    <a title="Hoạt hình" href="/danh-sach/hoat-hinh-55.html">Hoạt hình</a>
+                </li>
+                <li class="vip">
+                    <a href="http://id.banhtv.com" target="_blank">
+                        <img src="/images/vip.png" />
+                        <span>Nạp VIP</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="login dropdown" id="div_login">
+                <a href="#" title="Đăng nhập" data-toggle="modal" data-target="#modal-login">Đăng nhập</a>
+            </div>
+            <div id="div_loged" style="display:none">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <img class="avatar" src="" />
+                    <span class="hidden-xs name"></span>
+                    <span class="hidden-xs vip"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <!-- User image -->
+                    <li class="user-header">
+                        <img src="" class="img-circle" alt="User Image" />
+                        <p class="name"></p>
+                        <p class="xu"></p>
+                        <a class="btn-charge" href="http://id.banhtv.com#option-charging">Nạp tiền</a>
+                        <a class="btn-charge" href="http://id.banhtv.com/khuyen-mai.html">Khuyến mãi</a>
+                    </li>
+                    <!-- Menu Footer-->
+                    <li class="user-footer">
+                        <div class="pull-left">
+                            <a href="http://id.banhtv.com/cap-nhat-thong-tin.html" class="btn btn-default btn-flat">Thông tin</a>
+                        </div>
+                        <div class="pull-right">
+                            <a class="btn btn-default btn-flat" href="http://id.banhtv.com/dang-xuat.html?rel=http://banhtv.com">Đăng xuất</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                $(document).ready(function () {
+                    $.ajax({
+                        url: "http://id.banhtv.com/user/getInfo?t=1513235875",
+                        xhrFields: {
+                            withCredentials: true
+                        }
+                    }).done(function (data) {
+                        if (data["id"]) {
+                            displayLoginBox(data);
+                            if (parseInt(data["vip"]) > 0) {
+                                console.log("nodas");
+                                callNoPlayAds();
+                            } else {
+                                console.log("hasas");
+                                callPlayAds('site_index');
+                            }
+                        } else {
+                            console.log("hasas");
+                            callPlayAds('site_index');
+                        }
+                    });
+                    function displayLoginBox(data) {
+                        $("#div_loged .avatar").attr("src", data["image"]);
+                        $("#div_loged .img-circle").attr("src", data["image"]);
+                        $("#div_loged .name").html(data["name"]);
+                        $("#div_loged .vip").html('VIP: ' + data["vip"] + ' ngày');
+                        $("#div_loged .xu").html('Số dư: ' + data["remain_amount"] + ' xu');
+                        $("#div_loged .name").html(data["name"]);
+                        $("#div_login").html("");
+                        $("#div_loged").show().appendTo("#div_login");
+                    }
+                });
+            </script>
+
+
+            <form class="form-search" method="GET" action="/tim-kiem.html">
+                <input name="q" id="keyword" placeholder="Tìm tên phim, diễn viên..." />
+                <i class="fa fa-search"></i>
+                <div style="display: block;" id="suggestions" class="top-search-box"></div>
+            </form>
+        </div>
+    </div>
+    <div id="bswrapper_inhead"></div>
+    <div class="div-ads">
+        <div id="ads_top_pc_2"></div>
+    </div>
+    <!-- Modal login -->
+    <div class="modal fade" id="modal-login" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+
+                    <div id="alert-login" class="alert alert-danger fade in hide">
+                        <a href="#" class="close" title="close">×</a>
+                        <strong>Lỗi!</strong> <span class="message"></span>
+                    </div>
+                    <div class="group-dangnhap">
+                        <form method="POST" role="form" class="">
+                            <div class="form-group">
+                                <div class="">
+                                    <div class="input-group">
+                                        <span class="input-group-addon icon_group" style="color: #acb5b3;"><i class="fa fa-envelope-o"></i></span>
+                                        <input type="text" class="form-control" id="user_email" name="phone" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="">
+                                    <div class="input-group">
+                                        <span class="input-group-addon icon_group"><i class="fa fa-key"></i></span>
+                                        <input type="password" class="form-control" id="user_pass" name="password" placeholder="Mật khẩu">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <span class="btn-login">ĐĂNG NHẬP</span>
+                            </div>
+                            <div class="form-group text-right">
+                                <a class="btn-link" href="http://id.banhtv.com/dang-ky.html">Đăng ký</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="group-dangnhap">
+                        <p>Đăng nhập bằng</p>
+
+                        <div class="social-login" onclick="loginUsingFacebook()">
+                            <img class="icon" src="/images/icon-fb.jpg" />
+                            <span>Sign in</span>
+                        </div>
+                        <div class="social-login">
+                            <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" data-width="226" data-height="46"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    $(document).ready(function () {
+        $(".fa-search").click(function () {
+            $(".form-search").toggleClass('focus');
+        })
+        $("#keyword").focus(function () {
+            $(".form-search").addClass('focus');
+        });
+        $("#keyword").blur(function () {
+            //$(".form-search").removeClass('focus');
+        });
+
+
+    })
+</script>
+    @RenderBody()
+    <div class="box-fanpage">
+        <div class="relative">
+            <i onclick="$('.box-fanpage').toggleClass('on')" id="toggle-fanpage" class="fa fa-facebook-square only-web" aria-hidden="true"></i>
+            <div class="fb-page" data-href="https://www.facebook.com/BanhTv" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/BanhTv/?fref=ts" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/BanhTv/?fref=ts">Banh TV</a></blockquote></div>
+        </div>
+
+    </div>
+    <div id="footer">
+        <div class="container">
+            <a id="footer-logo" class="column" href="/">
+                <img src="/images/logo.png?v=1.2" />
+            </a>
+
+            <div class="column contact">
+                <p>Giới thiệu</p>
+                <ul>
+                    <li><a href="/">Trang chủ</a></li>
+                    <li><a href="javascript:void(0)">Giới thiệu</a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/">Facebook</a></li>
+                </ul>
+            </div>
+            <div class="column ">
+                <p>Đóng góp</p>
+                <ul>
+                    <li><a href="javascript:void(0)">Hợp tác nội dung</a></li>
+                    <li><a href="javascript:void(0)">Hướng dẫn sử dụng</a></li>
+                    <li><a href="javascript:void(0)">Liên hệ quảng cáo</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <p>Quy định</p>
+                <ul>
+                    <li><a href="/dieu-khoan-chung.html">Điều khoản sử dụng</a></li>
+                    <li><a href="javascript:void(0)">Chính sách riêng tư</a></li>
+                    <li><a href="/ban-quyen-noi-dung.html">Khiếu nại bản quyền</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <p>Trợ giúp</p>
+                <ul>
+                    <li><a href="javascript:void(0)">Hỏi đáp</a></li>
+                    <li><a href="http://id.banhtv.com/lien-he.html">Liên hệ</a></li>
+                    <li><a href="javascript:void(0)">Tin tức</a></li>
+                </ul>
+            </div>
+            <div class="column download-app">
+                <p>Tải ứng dụng</p>
+                <ul class="">
+                    <li><a href="javascript:void(0)"><i class="fa fa-apple" aria-hidden="true"></i> <span>IOS</span></a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-android" aria-hidden="true"></i> <span>Android</span></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        VP.init({ clientId: "a3ecc81311fec044a911b378119bc727" });
+    </script>
+    <div id="fb-root"></div>
+    <script async type="text/javascript">
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1089059977876558',
+                cookie: true,  // enable cookies to allow the server to access the session// the session
+                xfbml: true,  // parse social plugins on this page
+                version: 'v2.2' // use version 2.2
+            });
+
+        };
+
+        // Load the SDK asynchronously
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "http://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    @Html.RenderJsHere()
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-86851874-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+    <!-- Begin comScore Tag -->
+    <script>
+        var _comscore = _comscore || [];
+        _comscore.push({ c1: "2", c2: "23511627" });
+        (function () {
+            var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+            s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+            el.parentNode.insertBefore(s, el);
+        })();
+    </script>
+    <noscript>
+        <img src="http://b.scorecardresearch.com/p?c1=2&c2=23511627&cv=2.0&cj=1" />
+    </noscript>
+    <!-- End comScore Tag -->
+    <div class="hide" id="overlay_menu" onclick="$('.btn-humber').click()"></div>
+</body>
+<div class="ads-balloon-sidebar" style="position:fixed;left:0;bottom:0">
+    <script defer src="//d5.hadarone.com/ads-sync.js?placement=1524"></script>
+
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot('/192930568/banhtv.com_Balloon', [1, 1], 'div-gpt-ad-1512303394769-0').addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <!-- /192930568/banhtv.com_Balloon -->
+    <div id='div-gpt-ad-1512303394769-0' style='height:1px; width:1px;'>
+        <script>
+            googletag.cmd.push(function () { googletag.display('div-gpt-ad-1512303394769-0'); });
+        </script>
+    </div>
+</div>
+<div class="ads-balloon-sidebar" style="position:fixed;right:0;bottom:0"></div>
+</html>
